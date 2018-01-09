@@ -81,7 +81,8 @@ public class WelcomeController {
         System.out.println(name);
         return "hi " + name;
     }
-    @ResponseBody
+    @SuppressWarnings("serial")
+	@ResponseBody
     @RequestMapping(value = "/hi", method = RequestMethod.GET)
     public List<String> hi() {
         return new ArrayList<String>(){{  
